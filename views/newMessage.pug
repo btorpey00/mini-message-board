@@ -1,0 +1,12 @@
+extends layout 
+
+block content 
+    h1= title
+    form(method='POST', action='/new')
+        label(for='nameInput')= 'Name'
+        input(type='text', name='nameInput', required, autocomplete= 'off')
+        label(for='messageInput')= 'Message'
+        input(type='text', name='messageInput', required, autocomplete= 'off')
+        button(type='submit')= 'Submit'
+        a(href='/')
+            button(type='button')= 'Cancel'
